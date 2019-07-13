@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Collapse Functionality Testing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styleCSS.css" />
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    
+</body>
+</html>
+<body>
+    <center>
+        <h1>Testing out the Collapsing functionality and then add to our portal !!!</h1>
+    </center>
+    <p><h3>Single Collapse Button</h3></p>
+    <button class="collapsible">Open Section</button>
+    <div class="content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id viverra tortor. 
+            Cras efficitur magna gravida nunc sagittis, vitae rutrum lorem laoreet. Fusce eget magna eget nunc volutpat placerat. 
+            Aliquam elit est, lobortis sit amet mauris vel, consectetur iaculis nulla. Phasellus accumsan in arcu et dictum. 
+            Donec non rutrum odio. Integer tincidunt massa leo, vel ultrices diam tristique nec. Suspendisse dapibus eros tortor,
+            a lobortis odio blandit ac. Nulla dapibus metus non augue gravida rutrum. Ut ornare urna sapien, vel scelerisque ante 
+            interdum at.
+        </p>
+        <center>
+            <img src="D:\Learn HTML\Test_Collapse\screenshot.png" alt="TDM Button" style="height:75%; width:75%;">
+        </center>
+    </div>
+    <p><h3 style="color: red; font-family: Verdana; ">Series of collapse buttons !!!</h3></p>
+    <button class="collapsible">Open Section 1</button>
+    <div class="content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id viverra tortor. 
+            Cras efficitur magna gravida nunc sagittis, vitae rutrum lorem laoreet. Fusce eget magna eget nunc volutpat placerat. 
+            Aliquam elit est, lobortis sit amet mauris vel, consectetur iaculis nulla. Phasellus accumsan in arcu et dictum. 
+            Donec non rutrum odio. Integer tincidunt massa leo, vel ultrices diam tristique nec. Suspendisse dapibus eros tortor,
+            a lobortis odio blandit ac. Nulla dapibus metus non augue gravida rutrum. Ut ornare urna sapien, vel scelerisque ante 
+            interdum at.
+        </p>
+    </div>
+    <button class="collapsible">Open Section 2</button>
+    <div class="content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id viverra tortor. 
+            Cras efficitur magna gravida nunc sagittis, vitae rutrum lorem laoreet. Fusce eget magna eget nunc volutpat placerat. 
+            Aliquam elit est, lobortis sit amet mauris vel, consectetur iaculis nulla. Phasellus accumsan in arcu et dictum. 
+            Donec non rutrum odio. Integer tincidunt massa leo, vel ultrices diam tristique nec. Suspendisse dapibus eros tortor,
+            a lobortis odio blandit ac. Nulla dapibus metus non augue gravida rutrum. Ut ornare urna sapien, vel scelerisque ante 
+            interdum at.
+        </p>
+    </div>
+    <button class="collapsible">Open Section 3</button>
+    <div class="content">
+        <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id viverra tortor. 
+                Cras efficitur magna gravida nunc sagittis, vitae rutrum lorem laoreet. Fusce eget magna eget nunc volutpat placerat. 
+                Aliquam elit est, lobortis sit amet mauris vel, consectetur iaculis nulla. Phasellus accumsan in arcu et dictum. 
+                Donec non rutrum odio. Integer tincidunt massa leo, vel ultrices diam tristique nec. Suspendisse dapibus eros tortor,
+                a lobortis odio blandit ac. Nulla dapibus metus non augue gravida rutrum. Ut ornare urna sapien, vel scelerisque ante 
+                interdum at.
+        </p>
+    </div>
+    <button class="collapsible">Open Section 4</button>
+    <div class="content">
+        <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id viverra tortor. 
+                Cras efficitur magna gravida nunc sagittis, vitae rutrum lorem laoreet. Fusce eget magna eget nunc volutpat placerat. 
+                Aliquam elit est, lobortis sit amet mauris vel, consectetur iaculis nulla. Phasellus accumsan in arcu et dictum. 
+                Donec non rutrum odio. Integer tincidunt massa leo, vel ultrices diam tristique nec. Suspendisse dapibus eros tortor,
+                a lobortis odio blandit ac. Nulla dapibus metus non augue gravida rutrum. Ut ornare urna sapien, vel scelerisque ante 
+                interdum at.
+        </p>
+    </div>
+    <button class="collapsible">Open Section 5</button>
+    <div class="content">
+        <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id viverra tortor. 
+                Cras efficitur magna gravida nunc sagittis, vitae rutrum lorem laoreet. Fusce eget magna eget nunc volutpat placerat. 
+                Aliquam elit est, lobortis sit amet mauris vel, consectetur iaculis nulla. Phasellus accumsan in arcu et dictum. 
+                Donec non rutrum odio. Integer tincidunt massa leo, vel ultrices diam tristique nec. Suspendisse dapibus eros tortor,
+                a lobortis odio blandit ac. Nulla dapibus metus non augue gravida rutrum. Ut ornare urna sapien, vel scelerisque ante 
+                interdum at.
+        </p>
+    </div>
+</body>
+<script>
+    var coll = document.getElementsByClassName("collapsible")
+    var i;
+
+    console.log(coll)
+
+    for(i=0; i< coll.length; i++) {
+        console.log("i: "+i)
+        coll[i].addEventListener("click", function(){
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if(content.style.display === "block"){
+                content.style.display="none";
+            } else {
+                content.style.display = "block";
+            }
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+</html>
